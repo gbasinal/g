@@ -1,0 +1,25 @@
+
+
+<div class="container justify-content-center text-center"  [@defaultRevealAnimation]="'revealed'">
+    <div class="row">
+        <div class="col-12" >
+            <h2 class="default-animation-reveal">Who is the Guy Behind the Code</h2>
+        </div>
+    </div>
+    <ng-container >
+        <div class="row" *ngIf="isAboutMeRevealed" [@defaultRevealAnimation]="'revealed'">
+            <div class="col-12">
+                <p class="default-animation-reveal">Reggie is a skilled front-end developer with experience using Angular, React, WordPress, Drupal, HTML, CSS, and Javascript. He is dedicated to creating beautiful and functional websites, and takes great pride in delivering top-notch work.</p>
+                <p class="default-animation-reveal">But Reggie's interests extend beyond code. An avid gamer, he enjoys playing Dota2 and editing video game clips in his free time. He's also a big reader, who loves nothing more than losing himself in a good book, a manga, or a light novel. He also tries his hand at photography He even has a passion for collecting and playing board games.He's also trying his hand at mobile photography and likes capturing beautiful views of nature.</p>
+                <p class="default-animation-reveal">For Reggie, his passion for the web stems from his desire to connect with others and share his interests. He's always open to connecting with others who share his passions, and even offers his services for free to those looking for video clip editing for FPS games.</p>
+                <p class="default-animation-reveal">If you're looking for a front-end developer who is knowledgeable, dedicated, and ready to bring your website visions to life, or just someone who you share interest with, look no further than Reggie. Shoot him a message and see for yourself.</p>
+            </div>
+        </div>
+    </ng-container>
+
+    <div class="row">
+        <div class="btn-group">
+            <button class="btn btn-link text-dark default-animation-reveal" (click)="revealAboutMe()"><i class="fa-solid fa-caret-down"></i></button>
+        </div>
+    </div>
+</div>

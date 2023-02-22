@@ -1,1 +1,56 @@
 /* You can add global styles to this file, and also import other style files */
+@import url('assets/fonts/comforta/stylesheet.css');
+@import url('assets/fonts/josefins_sans/stylesheet.css');
+
+@import "variable";
+
+
+h1,h2,h3,h4,h5,h6 {
+    font-family: $pFont;
+}
+
+p{
+    font-family: $sFont;
+}
+
+body {
+    background-color: $light;
+    &.night {
+        background-color: #0D0C1D;
+        color: $light;
+        .navigation-container{
+            ul{
+                li {
+                    a{
+                        color: $light !important;
+                    }
+                }
+            }
+        }
+        .fa-solid {
+            color : #FFE5B4;
+        }
+    }
+    &.day {
+        color: #0D0C1D;
+        background-color: $light;
+        .navigation-container{
+            ul{
+                li {
+                    a{
+                        color: #0D0C1D !important;
+                    }
+                }
+            }
+        }
+    }
+
+    // .card {
+    //     background-color : #E8E8E8 !important;
+    //     .card-body {
+    //         background-color : #E8E8E8 !important;
+    //     }
+    // }
+
+}
+

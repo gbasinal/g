@@ -1,0 +1,15 @@
+@import "../../../variable";
+
+.homepage-container{
+    font-family: $sFont;
+    .landing-lead-font{
+        font-family: $pFont;
+        font-weight: 700;
+        margin: 0;
+    }
+    h3{
+        margin : 0;
+        font-family: $sFont;
+    }
+}
+

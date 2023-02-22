@@ -1,0 +1,35 @@
+@import "../../../variable";
+
+.card {    
+    &__years {
+        cursor: pointer;
+        &:hover {
+            background-color: $accent;
+            box-shadow: 0px 1px 7px 2px rgba(225,229,180,0.5);
+            -webkit-box-shadow: 0px 1px 7px 2px rgba(225,229,180,0.5);
+            -moz-box-shadow: 0px 1px 7px 2px rgba(225,229,180,0.5);
+        }
+        .card-body{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: $dark;
+        }
+    }
+    p{
+        margin-bottom: 0;
+    }
+
+    &__career {
+        border: 0;
+        background-color: transparent;
+    }
+
+}
+
+.active {
+    box-shadow: 0px 1px 7px 2px rgba(225,229,180,0.5);
+    -webkit-box-shadow: 0px 1px 7px 2px rgba(225,229,180,0.5);
+    -moz-box-shadow: 0px 1px 7px 2px rgba(225,229,180,0.5);
+    background-color: $accent;
+}

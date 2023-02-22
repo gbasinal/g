@@ -1,0 +1,45 @@
+
+@import "../../../variable";
+
+.navigation-container{
+    font-family: $sFont;
+    ul {
+        padding: 0;
+        margin: 0;
+        li {
+            list-style-type: none;
+            transition: transform 0.2s;
+            a{
+                color: $dark;
+                text-decoration: none;
+            }
+            &:hover{
+                transform: scale(1.2);
+            }
+        }
+    }
+}
+
+
+.color-mode-container {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    top: 50%;
+}
+
+
+.btn-link {
+    font-size: 1.5em;
+}
+
+.active {
+    border-bottom: 1px solid;
+    font-size: 1.2em;
+}
+
+.logo-container {
+    position: absolute;
+    left: 0;
+    margin-left: 25px;
+}
