@@ -1,5 +1,7 @@
 # G
 
+This is my web portfolio v2 that is still under construction
+
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 15.0.4.
 
 ## Development server
