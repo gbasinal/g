@@ -18,8 +18,22 @@ body {
     &.night {
         background-color: #0D0C1D;
         color: $light;
+        input{
+            background-color: #0D0C1D;
+            color: $light;
+            &::placeholder {
+                color: $light;
+            }
+        }
+        textarea {
+            background-color: #0D0C1D;
+            color: $light;
+        }
         .navigation-container{
             ul{
+                &#menu {
+                    background-color: $dark;
+                }
                 li {
                     a{
                         color: $light !important;
@@ -30,12 +44,66 @@ body {
         .fa-solid {
             color : #FFE5B4;
         }
+        #menuToggle span {
+            background-color: $light;
+        }
+
+        .dropdown-button {
+            color : $light;
+            &:hover {
+                background-color: $light;
+                color : $dark;
+            }
+        }
+        .dropdown-menu{
+            border : 1px solid $light;
+            li {
+                color: $light;
+                background-color: $dark;
+                border-bottom: 1px solid $light;
+                &:hover{
+                    background-color: $dark;
+                    color: $light;
+                }
+                &.active {
+                    box-shadow: 0px 1px 7px 2px rgba(100, 100, 100, 0.5);
+                    -webkit-box-shadow: 0px 1px 7px 2px rgba(100, 100, 100, 0.5);
+                    -moz-box-shadow: 0px 1px 7px 2px rgba(100, 100, 100, 0.5);
+                    background-color: $light;
+                    color : $dark
+                }
+                
+            }
+        }
+        .card__years {
+            .active {
+                box-shadow: 0px 1px 7px 2px rgba(100, 100, 100, 0.5);
+                -webkit-box-shadow: 0px 1px 7px 2px rgba(100, 100, 100, 0.5);
+                -moz-box-shadow: 0px 1px 7px 2px rgba(100, 100, 100, 0.5);
+                background-color: $light;
+                color : $dark
+            }
+        }
     }
     &.day {
         color: #0D0C1D;
         background-color: $light;
+        input{
+            color: #0D0C1D;
+            background-color: $light;
+            &::placeholder {
+                color: #0D0C1D;
+            }
+        }
+        textarea {
+            color: #0D0C1D;
+            background-color: $light;
+        }
         .navigation-container{
             ul{
+                &#menu {
+                    background-color: $light;
+                }
                 li {
                     a{
                         color: #0D0C1D !important;
@@ -43,6 +111,47 @@ body {
                 }
             }
         }
+        #menuToggle span {
+            background-color: $dark;
+        }
+        .dropdown-button {
+            color : $dark;
+            &:hover {
+                background-color: $dark;
+                color : $light;
+            }
+        }
+        .dropdown-menu{
+            border : 1px solid $dark;
+            li {
+                color: $dark;
+                background-color: $light;
+                border-bottom: 1px solid $dark;
+                &:hover{
+                    background-color: $light;
+                    color: $dark;
+                }
+
+                &.active {
+                    box-shadow: 0px 1px 7px 2px rgba(100, 100, 100, 0.5);
+                    -webkit-box-shadow: 0px 1px 7px 2px rgba(100, 100, 100, 0.5);
+                    -moz-box-shadow: 0px 1px 7px 2px rgba(100, 100, 100, 0.5);
+                    background-color: $dark;
+                    color : $light
+                }
+                
+            }
+        }
+        .card__years {
+            .active {
+                box-shadow: 0px 1px 7px 2px rgba(100, 100, 100, 0.5);
+                -webkit-box-shadow: 0px 1px 7px 2px rgba(100, 100, 100, 0.5);
+                -moz-box-shadow: 0px 1px 7px 2px rgba(100, 100, 100, 0.5);
+                background-color: $dark;
+                color : $light
+            }
+        }
+
     }
 
     // .card {
@@ -54,3 +163,12 @@ body {
 
 }
 
+// .default-animation-reveal{
+//     transform: translateY(-25px);
+//     opacity: 0;
+// }
+::-webkit-scrollbar {
+    @media only screen and (max-width: 767px){
+        display: none;
+    }
+}

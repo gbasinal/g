@@ -1,10 +1,23 @@
-<div class="container justify-content-center text-center">
+
+<div class="container justify-content-center text-center"  [@defaultRevealAnimation]="'revealed'">
     <div class="row">
-        <div class="col-12">
-            <h2>Why I'm Passionate About Building the Web</h2>
+        <div class="col-12" >
+            <h2 class="default-animation-reveal">Why I'm Passionate About Building the Web</h2>
         </div>
     </div>
-    <div class="row">
+    <ng-container >
+        <div class="row" *ngIf="isMoreRevealed" [@defaultRevealAnimation]="'revealed'">
+            <div class="col-12 why-container">
+                <p class="default-animation-reveal">Back in high school, I discovered my love for HTML and CSS. It was like finding a secret superpower that allowed me to create and control anything with just a few lines of code. Suddenly, I felt like a digital wizard, able to make characters move, blink, and dance to my every whim. And when I threw my Photoshop skills into the mix, I felt like I could take on the world.</p>
+                <p class="default-animation-reveal">That's when I knew that I had to pursue a computer-related course in college. As a developer, I've found the perfect outlet for my creativity, and it's helped me unlock new levels of focus and innovation. Whether I'm working on a new project or solving a complex problem, I'm always thinking outside the box.</p>
+                <p class="default-animation-reveal">For me, coding isn't just a profession - it's a passion. It allows me to express my creativity in ways that I never thought possible, and I'm constantly inspired by the endless possibilities that technology offers. So if you're looking for a developer who's equal parts wizard and artist, look no further!</p>
+            </div>
+        </div>
+    </ng-container>
 
+    <div class="row">
+        <div class="btn-group">
+            <button class="btn btn-link text-dark default-animation-reveal" (click)="revealMore()"><i class="fa-solid fa-caret-down"></i></button>
+        </div>
     </div>
 </div>

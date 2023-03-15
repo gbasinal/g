@@ -1,11 +1,47 @@
 
-<div class="container justify-content-center text-center">
+<div class="container justify-content-center text-center"  [@defaultRevealAnimation]="'revealed'">
     <div class="row">
-        <div class="col-12">
-            <h2>What I Can Do: A Showcase of My Web Development Skills</h2>
+        <div class="col-12 ">
+            <h2 class="default-animation-reveal">What I Can Do: A Showcase of My Web Development Skills</h2>
         </div>
     </div>
-    <div class="row">
-
+    <div class="row" *ngIf="!isShowcaseRevealed">
+        <div class="btn-group">
+            <button class="btn btn-link text-dark default-animation-reveal" (click)="revealProjects()"><i class="fa-solid fa-caret-down"></i></button>
+        </div>
     </div>
+   
+    <div class="row glass-container mt-4" *ngIf="isShowcaseRevealed" [@defaultRevealAnimation]="'revealed'">
+      <div class="default-animation-reveal">
+        <ng-container *ngIf="isProjectClicked">
+          <div class="glass-panel left" (click)="span('projects')" [@spanProject]="panelState">
+            <h3 *ngIf="isPlaygroundClicked">Projects</h3>
+            <!-- <h3>{{ !isPlaygroundClicked ? 'Loading...' : 'Projects' }}</h3> -->
+            <!-- <div class="loader" *ngIf="!isPlaygroundClicked">
+              <img src="{{ imgURL }}/loader.gif" alt="spinner loader">
+            </div> -->
+
+            <div *ngIf="!isPlaygroundClicked"  [@childDefaultRevealAnimation]="childDefaultRevealAnimation" >
+              <h3><i class="fa-solid fa-person-digging "></i> This section is still under construction, please come back again.</h3>
+            </div>
+          </div>
+        </ng-container>
+          
+        <ng-container *ngIf="isPlaygroundClicked">
+          <div class="glass-panel right" (click)="span('playground')" [@spanPlayground]="panelState">
+            <!-- <h3>{{ !isProjectClicked ? 'Loading...' : 'Playground' }}</h3> -->
+            <h3 *ngIf="isProjectClicked">Playground</h3>
+            <!-- <div class="loader" *ngIf="!isProjectClicked">
+              <img src="{{ imgURL }}/loader.gif" alt="spinner loader">
+            </div> -->
+            <div *ngIf="!isProjectClicked" [@childDefaultRevealAnimation]="childDefaultRevealAnimation" >
+              <h3><i class="fa-solid fa-person-digging"></i> This section is still under construction, please come back again.</h3>
+            </div>
+          </div>
+        </ng-container>
+      </div>
+    </div>
+      
+   
+
 </div>

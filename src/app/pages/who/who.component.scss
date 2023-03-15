@@ -5,3 +5,12 @@ h2{
 .btn-link {
     font-size: 30px ;
 }
+
+.about-me-container{ 
+    @media only screen and (max-width: 767px){
+        height: 250px;
+        overflow: scroll;
+        scrollbar-width: none;
+    }
+
+}

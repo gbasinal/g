@@ -1,13 +1,21 @@
 @import "../../../variable";
 
-.card {    
+.card {   
+    border: 0;
+    .card-body{
+        box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+        backdrop-filter: blur(5px);
+        -webkit-backdrop-filter: blur(5px);
+        transition: all 0.2s ease-in-out;
+    } 
     &__years {
+        background-color: rgba(255, 255, 255, 0.09);
         cursor: pointer;
         &:hover {
             background-color: $accent;
-            box-shadow: 0px 1px 7px 2px rgba(225,229,180,0.5);
-            -webkit-box-shadow: 0px 1px 7px 2px rgba(225,229,180,0.5);
-            -moz-box-shadow: 0px 1px 7px 2px rgba(225,229,180,0.5);
+            box-shadow: 0px 1px 7px 2px rgba(100, 100, 100, 0.5);
+            -webkit-box-shadow: 0px 1px 7px 2px rgba(100, 100, 100, 0.5);
+            -moz-box-shadow: 0px 1px 7px 2px rgba(100, 100, 100, 0.5);
         }
         .card-body{
             display: flex;
@@ -27,9 +35,68 @@
 
 }
 
-.active {
-    box-shadow: 0px 1px 7px 2px rgba(225,229,180,0.5);
-    -webkit-box-shadow: 0px 1px 7px 2px rgba(225,229,180,0.5);
-    -moz-box-shadow: 0px 1px 7px 2px rgba(225,229,180,0.5);
-    background-color: $accent;
+
+/* Custom Dropdown Styles */
+.custom-dropdown {
+    position: relative;
+    display: inline-block;
+}
+  
+.dropdown-button {
+    display: inline-block;
+    background-color: rgba(255, 255, 255, 0.09);
+    color: $dark;
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
+    box-shadow: 0 4px 30px rgb(0 0 0 / 10%);
+    backdrop-filter: blur(5px);
+    -webkit-backdrop-filter: blur(5px);
+    transition: all 0.2s ease-in-out;
+}
+.dropdown-menu {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    z-index: 999;
+    background-color: rgba(255, 255, 255, 0.09);
+    border-radius: 5px;
+    padding: 0;
+    width: 75%;
+    margin: 15px auto;
+    right: 0;
+    height: 150px;
+    overflow: scroll;
+    scrollbar-width: none;
+}
+
+
+
+.dropdown-menu li {
+    display: block;
+    padding: 10px 20px;
+    text-decoration: none;
+    transition: all 0.2s ease-in-out;
+    list-style: none;
+}
+
+.custom-dropdown.open .dropdown-menu {
+  display: block;
+}
+
+
+
+::-webkit-scrollbar {
+    display: none;
+}
+
+.career-container{
+    @media only screen and (max-width : 767px){
+        height: 250px;
+        overflow: scroll;
+        scrollbar-width: none;
+        padding: 15px;
+    }
 }

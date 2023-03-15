@@ -1,10 +1,10 @@
-<div [@defaultRevealAnimation]="'revealed'">
-    <div class="logo-container">
+<nav role="navigation"[@defaultRevealAnimation]="'revealed'">
+    <div class="logo-container default-animation-reveal">
         <a routerLink="/">
                 <svg width="60" height="54" viewBox="0 0 240 234" class="css-1j8o68f"><defs id="SvgjsDefs1364"></defs><g id="SvgjsG1365" featurekey="rootContainer" transform="matrix(1,0,0,1,0,0)" [ngStyle]="{'fill' : mode === 'regular' ? '#FFE5B4' : '#0D0C1D'}" ><rect xmlns="http://www.w3.org/2000/svg" width="240" height="234" rx="10" ry="10"></rect></g><g id="SvgjsG1366" featurekey="q4o0QG-0" transform="matrix(12.820513290766446,0,0,12.820513290766446,14.102564161345805,-44.61538649639911)" [ngStyle]="{'fill' : mode === 'regular' ? '#0D0C1D' : '#FFE5B4'}"><path d="M0.58 5.859999999999999 l0.6 -0.54 l0 0 l1.78 -0.28 l3.76 0.28 l0.52 0.54 l0.48 0.8 l0.14 3.44 l-2.8 0.28 l-0.12 -0.52 l-0.02 -2.42 l-0.94 -0.36 l-0.78 0.1 l0.1 9.12 l0.56 0.28 l2.7 0.14 l0 -1.46 l-2.48 0.02 l-0.04 -0.24 l0 -2.32 l3.26 -0.24 l0.56 0.1 l0.02 3.62 l-0.1 3.58 l-3.2 0.36 l-2.26 -0.22 l-1.28 -0.84 l-0.28 -0.9 l-0.3 -10.9 z M15.459999999999999 5.74 l0.6 2.94 l0 2.12 l-0.42 3 c-0.22 0.06 -0.4 0.1 -0.56 0.16 l-0.78 0.22 c-0.08 0.06 -0.6 0.08 -1.08 0.1 c-0.26 0.02 -0.56 0.02 -0.9 0.02 l-0.14 1.38 l-0.1 0.74 l-2.94 0 l-0.06 -0.7 l0.22 -2.88 l1.42 -0.18 l1.4 0.02 l1 -0.3 l0.06 -4.08 l-1.86 -0.06 l0.14 1.02 l0 0.74 l0 0.6 l0.1 0.78 l-1.72 -0.02 l-0.76 0.06 l-0.04 -0.76 l-0.14 -3.24 l0.24 -1.38 l0.56 -0.42 l1.2 -0.48 l2.76 0.14 z M9.26 17.32 l3.08 -0.04 l0.26 1.24 l-0.06 1.34 l-0.22 0.2 l-2.96 -0.02 l-0.16 -0.76 l0 -1.28 z"></path></g></svg>
         </a>
     </div>
-    <div class="navigation-container text-center mt-2">
+    <div class="navigation-container text-center mt-2 desktop-nav">
         <ul class="d-flex justify-content-center default-animation-reveal">
             <li class=""><a routerLink="/who" routerLinkActive="active">-who-</a></li>
             <li class="ms-3"><a routerLink="/what" routerLinkActive="active">-what-</a></li>
@@ -20,5 +20,22 @@
             </button>
         </div>
     </div>
-</div>
- 
+</nav>
+
+<nav role="navigation" class="mobile-nav">
+    <div id="menuToggle" class="navigation-container">
+      <input type="checkbox" />
+      <span></span>
+      <span></span>
+      <span></span>
+      <ul id="menu">
+        <li><a routerLink="/who" routerLinkActive="active" (click)="closeMenu()">-who-</a></li>
+        <li><a routerLink="/what" routerLinkActive="active" (click)="closeMenu()">-what-</a></li>
+        <li><a routerLink="/where" routerLinkActive="active" (click)="closeMenu()">-where-</a></li>
+        <li><a routerLink="/why" routerLinkActive="active" (click)="closeMenu()">-why-</a></li>
+        <li><a routerLink="/how" routerLinkActive="active" (click)="closeMenu()">-how-</a></li>
+      </ul>
+    </div>
+</nav>
+
+  

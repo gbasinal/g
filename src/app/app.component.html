@@ -1,16 +1,16 @@
-<div [@defaultRevealAnimation]="'revealed'">
-  <div class="navigation-wrapper mt-3">
-    <div class="default-animation-reveal">
-      <app-navigation></app-navigation>
-    </div>
-  </div>
-  <div class="full-screen d-flex align-items-center justify-content-center w-100 default-animation-reveal">
-    <router-outlet></router-outlet>
-  </div>
-  <div class="trivia-container" >
-    <div class="default-animation-reveal">
-      <p>Did you know? Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quisquam quibusdam velit beatae eligendi ullam laudantium qui debitis, praesentium voluptatem quidem!</p>
-    </div>
+
+<div class="navigation-wrapper mt-3">
+  <div [@defaultRevealAnimation]="'revealed'" class="default-animation-reveal">
+    <app-navigation></app-navigation>
   </div>
 </div>
+<div [@defaultRevealAnimation]="'revealed'" class="full-screen d-flex align-items-center justify-content-center w-100 default-animation-reveal">
+  <router-outlet></router-outlet>
+</div>
+<div class="trivia-container"  >
+  <div class="mx-3" [@defaultRevealAnimation]="'revealed'" >
+    <p class="default-animation-reveal">{{fact}}</p>
+  </div>
+</div>
+
 

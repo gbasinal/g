@@ -19,5 +19,9 @@ export class Shared {
         }));
     }
 
+    getFacts(){
+      return this.http.get('https://uselessfacts.jsph.pl/random.json?language=en');
+    }
+
     
 }

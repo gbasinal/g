@@ -27,4 +27,9 @@ export class NavigationComponent implements OnInit{
     this.renderer.addClass(this.document.body, classToAdd);
     this.renderer.removeClass(this.document.body, classToRemove);
   }
+
+  closeMenu() {
+    const checkbox = document.querySelector('#menuToggle input[type="checkbox"]') as HTMLInputElement;
+    checkbox.checked = false;
+  }
 }

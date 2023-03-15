@@ -13,6 +13,7 @@ import { WhyComponent } from './pages/why/why.component';
 import { WhereComponent } from './pages/where/where.component';
 import { HowComponent } from './pages/how/how.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -30,6 +31,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
     AppRoutingModule,
     HttpClientModule,
     BrowserAnimationsModule,
+    FormsModule,
     NgbModule
   ],
   providers: [],

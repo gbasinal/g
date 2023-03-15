@@ -1,10 +1,26 @@
-<div class="container justify-content-center text-center">
+
+
+
+
+<div class="container justify-content-center text-center"  [@defaultRevealAnimation]="'revealed'">
     <div class="row">
-        <div class="col-12">
-            <h2>How to Connect With Your Next Web Development Partner</h2>
+        <div class="col-12" >
+            <h2 class="default-animation-reveal">How to Connect With Your Next Web Development Partner</h2>
         </div>
     </div>
-    <div class="row">
+    <ng-container >
+        <div class="row" *ngIf="isMoreRevealed" [@defaultRevealAnimation]="'revealed'">
+            <div class="col-12">
+                <p class="default-animation-reveal">Let's connect in <a href="https://www.linkedin.com/in/giebasinal/" target="_blank"><i class="fa-brands fa-linkedin"></i></a> or you can shoot me an <a href="mailto:giebasinal@gmail.com"><i class="fa-regular fa-envelope"></i></a>.</p>
+                <p class="default-animation-reveal">You can also catch me in my <a href="https://www.instagram.com/giergb/"  target="_blank"><i class="fa-brands fa-instagram"></i></a> account and my <a href="https://www.youtube.com/@justgier7503"  target="_blank"><i class="fa-brands fa-youtube"></i></a> channel.</p>
+                <h3 class="default-animation-reveal">See you there!!</h3>
+            </div>
+        </div>
+    </ng-container>
 
+    <div class="row">
+        <div class="btn-group">
+            <button class="btn btn-link text-dark default-animation-reveal" (click)="revealMore()"><i class="fa-solid fa-caret-down"></i></button>
+        </div>
     </div>
 </div>
